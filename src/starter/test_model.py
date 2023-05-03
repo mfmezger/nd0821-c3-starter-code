@@ -1,9 +1,13 @@
+import os
+import sys
 import numpy as np
 import pytest
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
-from starter.ml import train_model, compute_model_metrics, inference
 
+file_dir = os.path.dirname(__file__)
+sys.path.insert(0, file_dir)
+from ml.model import train_model, compute_model_metrics, inference
 
 @pytest.fixture
 def classification_data():

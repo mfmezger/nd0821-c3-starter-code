@@ -8,7 +8,7 @@ import pandas as pd
 app = FastAPI()
 
 class ModelInput(BaseModel):
-    # Using the first row of census.csv as sample
+    # first row of census.csv
     age: int = Field(None, example=39)
     workclass: str = Field(None, example='State-gov')
     fnlgt: int = Field(None, example=77516)
