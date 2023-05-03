@@ -11,7 +11,7 @@ import pandas as pd
 data = pd.read_csv("data/census.csv")
 # Optional enhancement, use K-fold cross validation instead of a train-test split.
 train, test = train_test_split(data, test_size=0.20)
-
+file_path = "/starter/model/"
 cat_features = [
     "workclass",
     "education",
@@ -34,13 +34,13 @@ X_test, y_test, encoder, lb = process_data(
 # Train and save a model.
 ada_boost = train_model(X_train, y_train)
 
-model_path = os.path.join(file_dir, '/model/rf_model.pkl')
+model_path = os.path.join(file_path, '/model/rf_model.pkl')
 pickle.dump(ada_boost, open(model_path, 'wb'))
 
-encoder_path = os.path.join(file_dir, '/model/encoder.pkl')
+encoder_path = os.path.join(file_path, '/model/encoder.pkl')
 pickle.dump(encoder, open(encoder_path, 'wb'))
 
-lb_path = os.path.join(file_dir, '/model/lb.pkl')
+lb_path = os.path.join(file_path, '/model/lb.pkl')
 pickle.dump(lb, open(lb_path, 'wb'))
 
 # Predict
