@@ -32,8 +32,8 @@ class ModelInput(BaseModel):
 async def root() -> dict:
     return {"message": "Welcome to the API!"}
 
-async def get_model() -> tuple:
-    model_path = Path(__file__).parent / "model" / "rf_model.pkl"
+def get_model() -> tuple:
+    model_path = Path(__file__).parent / "model" / "ada_boost.pkl"
     encoder_path = Path(__file__).parent / "model" / "encoder.pkl"
     lb_path = Path(__file__).parent / "model" / "lb.pkl"
 
