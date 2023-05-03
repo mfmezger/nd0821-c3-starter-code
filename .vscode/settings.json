@@ -1,7 +1,10 @@
 {
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#322653",
-        "titleBar.activeBackground": "#463574",
-        "titleBar.activeForeground": "#FAFAFD"
-    }
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#322653",
+    "titleBar.activeBackground": "#463574",
+    "titleBar.activeForeground": "#FAFAFD"
+  },
+  "python.testing.pytestArgs": ["."],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true
 }

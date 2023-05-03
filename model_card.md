@@ -18,9 +18,9 @@ The model's performance is evaluated using the following metrics:
 
 Accuracy: The proportion of correctly classified instances out of the total instances.
 Precision: The proportion of true positive instances out of the instances predicted as positive.
-Recall: The proportion of true positive instances out of the actual positive instances.
-F1-Score: The harmonic mean of precision and recall, providing a balance between the two metrics.
-Please include the specific performance metrics of your AdaBoost classifier for a more comprehensive model card.
+Fbeta: A weighted harmonic mean of precision and recall, where recall is the proportion of true positive instances out of the total positive instances.
+
+precision: 0.7557312252964427, recall: 0.62853385930309, fbeta: 0.6862885857860731
 
 ## Ethical Considerations
 When using this model, it is crucial to consider the potential biases present in the training data, such as sampling bias or underrepresentation of certain demographic groups. These biases could lead to the model producing unfair or discriminatory predictions. It is essential to evaluate the model's performance and fairness across different subgroups and to take appropriate measures in addressing any identified disparities.
