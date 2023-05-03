@@ -1,4 +1,5 @@
 import requests
+
 sample_input = {
     "age": 39,
     "workclass": "State-gov",
@@ -17,5 +18,5 @@ sample_input = {
 }
 
 # make a POST request to the endpoint
-response = requests.post("https://demo-qqxr.onrender.com/predict", json=sample_input)
+response = requests.post("https://demo-qqxr.onrender.com:10000/predict", json=sample_input)
 print(response.text)
