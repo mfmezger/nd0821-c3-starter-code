@@ -9,10 +9,10 @@ from ml.model import train_model, inference, compute_model_metrics
 
 def main():
     # Add code to load in the data.
-    data = pd.read_csv("starter/data/census.csv")
+    data = pd.read_csv("data/census.csv")
     # Optional enhancement, use K-fold cross validation instead of a train-test split.
     train, test = train_test_split(data, test_size=0.20)
-    FILE_PATH = "starter/model/"
+    FILE_PATH = "model/"
 
     cat_features = [
         "workclass",
@@ -28,6 +28,7 @@ def main():
         train, categorical_features=cat_features, label="salary", training=True
     )
 
+    print("X_train shape: ", X_train.shape)
     # Proces the test data with the process_data function.
     X_test, y_test, encoder, lb = process_data(
         test,
