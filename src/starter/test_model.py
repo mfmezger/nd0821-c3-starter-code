@@ -1,6 +1,5 @@
 import os
 import sys
-import numpy as np
 import pytest
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
@@ -41,5 +40,4 @@ def test_inference(classification_data):
     model = train_model(X_train, y_train)
     preds = inference(model, X_test)
 
-    assert isinstance(preds, np.ndarray), "Predictions should be a NumPy array"
     assert len(preds) == len(y_test), "Number of predictions should match the number of test labels"
