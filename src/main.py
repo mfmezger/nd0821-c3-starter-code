@@ -4,6 +4,10 @@ from pydantic import BaseModel, Field
 from pathlib import Path
 import pickle
 import pandas as pd
+from starter.ml.data import process_data
+from starter.ml.model import inference
+from fastapi import HTTPException, Response
+
 
 app = FastAPI()
 
