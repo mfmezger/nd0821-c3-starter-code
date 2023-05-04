@@ -51,7 +51,7 @@ def test_predict_over_50():
         "relationship": "Husband",
         "race": "Asian-Pac-Islander",
         "sex": "Male",
-        "capital_gain": 0,
+        "capital_gain": 100000,
         "capital_loss": 0,
         "hours_per_week": 40,
         "native_country": "United-States"
