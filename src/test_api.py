@@ -36,22 +36,22 @@ def test_predict_sub_50():
 
     response = client.post("/predict", json=sample_input)
     assert response.status_code == 200
-    assert response.text.strip() in ["<=50K", ">50K"]
+    assert response.text == "<=50K"
 
 def test_predict_over_50():
-    # create a sample input for the model
+    # create a sample input for the model 
     sample_input = {
-        "age": 39,
-        "workclass": "State-gov",
-        "fnlgt": 77516,
-        "education": "Bachelors",
-        "education_num": 13,
-        "marital_status": "Never-married",
-        "occupation": "Adm-clerical",
-        "relationship": "Not-in-family",
-        "race": "White",
-        "sex": "Female",
-        "capital_gain": 217400000,
+        "age": 49,
+        "workclass": "Private",
+        "fnlgt": 81973,
+        "education": "Some-college",
+        "education_num": 10,
+        "marital_status": "Married-civ-spouse",
+        "occupation": "Craft-repair",
+        "relationship": "Husband",
+        "race": "Asian-Pac-Islander",
+        "sex": "Male",
+        "capital_gain": 0,
         "capital_loss": 0,
         "hours_per_week": 40,
         "native_country": "United-States"

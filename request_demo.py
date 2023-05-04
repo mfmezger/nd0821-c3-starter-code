@@ -20,3 +20,4 @@ sample_input = {
 # make a POST request to the endpoint
 response = requests.post("https://demo-qqxr.onrender.com:10000/predict", json=sample_input)
 print(response.text)
+print("Status code:", response.status_code)
